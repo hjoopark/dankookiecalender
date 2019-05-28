@@ -1,0 +1,325 @@
+$primary-color: #e2c100;
+
+$community-notice-color: #aaaaaa;
+$community-free-dankookie-color: #cc8e40;
+$community-dku-color: #3292f9;
+
+$community-free-color: #FDA913;
+$community-free-jukjeon-color: #a783ec;
+$community-free-cheonan-color: #9e4545;
+
+$community-politics-color: #3f4346;
+$community-politics-society-color: orange;
+$community-politics-debate-color: cyan;
+$community-politics-politics-color: red;
+
+$community-review-color: #00b5ad;
+$community-review-food-color: #8385f8;
+$community-review-attestation-color: purple;
+
+$community-love-color: #F279AE;
+$community-love-wolf-color: black;
+$community-love-fox-color: pink;
+$community-love-adult-color: red;
+
+$community-job-color: #4183c4;
+$community-job-recruit-color: #525252;
+$community-job-parttime-color: #00b318;
+$community-job-study-color: rgb(55, 205, 224);
+
+$community-ad-color: #f2711c;
+$community-ad-advertisement-color: rgb(96, 110, 13);
+$community-ad-post-color: blue;
+
+$community-market-color: #AE79F2;
+$community-market-sell-color: rgb(0, 225, 255);
+$community-market-buy-color: rgb(129, 92, 92);
+
+$community-news-color: #4285F4;
+
+$community-all-color: silver;
+
+.community_wrapper {
+  .category_tag {
+    font-size: 0.7em;
+    font-weight: 600;
+    color: white;
+
+    &.tag_filter {
+      display: inline-block;
+      padding: 10px 0px;
+      margin: 0px auto;
+
+      // border-bottom: 1px solid #E2E2E2;
+      .label {
+        color: black;
+      }
+
+      span {
+        margin-right: 5px;
+      }
+    }
+
+    span {
+      padding: 1px 3px;
+      display: inline-block;
+      border-radius: 2px;
+
+      &.sub {
+        margin-left: -1px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+
+    span.notice {
+      background-color: $community-notice-color;
+    }
+
+    span.dankookie {
+      background-color: $community-free-dankookie-color;
+    }
+
+    span.dku {
+      background-color: $community-dku-color;
+    }
+
+    span.free {
+      background-color: $community-free-color;
+    }
+
+    span.jukjeon {
+      background-color: $community-free-jukjeon-color;
+    }
+
+    span.cheonan {
+      background-color: $community-free-cheonan-color;
+    }
+
+    span.politics {
+      background-color: $community-politics-color;
+    }
+
+    span.society {
+      background-color: $community-politics-society-color;
+    }
+
+    span.debate {
+      background-color: $community-politics-debate-color;
+    }
+
+    span.review {
+      background-color: $community-review-color;
+    }
+
+    span.food {
+      background-color: $community-review-food-color;
+    }
+
+    span.attestation {
+      background-color: $community-review-attestation-color;
+    }
+
+    span.love {
+      background-color: $community-love-color;
+    }
+
+    span.wolf {
+      background-color: $community-love-wolf-color;
+    }
+
+    span.fox {
+      background-color: $community-love-fox-color;
+    }
+
+    span.adult {
+      background-color: $community-love-adult-color;
+    }
+
+    span.job {
+      background-color: $community-job-color;
+    }
+
+    span.recruit {
+      background-color: $community-job-recruit-color;
+    }
+
+    span.parttime {
+      background-color: $community-job-parttime-color;
+    }
+
+    span.study {
+      background-color: $community-job-study-color;
+    }
+
+    span.ad {
+      background-color: $community-ad-color;
+    }
+
+    span.advertisement {
+      background-color: $community-ad-advertisement-color;
+    }
+
+    span.post {
+      background-color: $community-ad-post-color;
+    }
+
+    span.market {
+      background-color: $community-market-color;
+    }
+
+    span.sell {
+      background-color: $community-market-sell-color;
+    }
+
+    span.buy {
+      background-color: $community-market-buy-color;
+    }
+
+    span.all {
+      background-color: $community-all-color;
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.el-rate {
+  .el-rate__icon {
+    margin: 0px !important;
+    font-size: 15px !important;
+  }
+
+  &.big {
+    .el-rate__icon {
+      font-size: 30px !important;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.content_html {
+  padding: 15px;
+  word-wrap: break-word;
+  font-size: 0.85em;
+
+  iframe {
+    max-width: 100% !important;
+  }
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  p {
+    line-height: 1.2em;
+    margin: 5px 0 5px 0;
+  }
+}
+
+.search_input_wrap {
+  top: 28px !important;
+  left: 0 !important;
+  width: 100% !important;
+  border-radius: 0 !important;
+
+  li {
+    padding: 0 10px;
+  }
+
+  input {
+    border-radius: 0;
+  }
+}
+
+.alarm_list_wrap {
+  top: 28px !important;
+  left: 0 !important;
+  width: 100% !important;
+  border-radius: 0 !important;
+  font-size: 8pt !important;
+  border-bottom: 1px solid gray;
+  max-height: 300px;
+  overflow-y: auto;
+  
+  .content {
+    font-size: 8pt;
+  }
+  .date {
+    font-size: 7pt;
+    float: right;
+  }
+}
+
+// .alarm_list_wrap {
+//   padding: 0 17px 0 0 !important;
+//   margin: 0 !important;
+//   top: 40px !important;
+//   left: 0 !important;
+//   bottom: 50px;
+//   width: 100%;
+//   overflow-y: scroll;
+//   box-sizing: content-box;
+
+//   ::-webkit-scrollbar {
+//     width: 0;
+//   }
+
+//   li {
+//     padding: 0;
+//     border-bottom: 1px solid #eee;
+//     font-size: 13px;
+
+//     a {
+//       padding: 5px 15px;
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       color: #000000;
+//       text-decoration: none;
+//     }
+
+//     span {
+//       display: block;
+//       letter-spacing: -.04rem;
+
+//       &.content {
+//         flex: 0 0 75%;
+//         white-space: nowrap;
+//         text-overflow: ellipsis;
+//         overflow: hidden;
+//       }
+
+//       &.date {
+//         flex: 0 0 25%;
+//         text-align: right;
+//       }
+//     }
+//   }
+// }
+
+.el-tabs__header {
+  .el-tabs__nav-scroll {
+    overflow-x: auto;
+  }
+}
+
+.el-collapse-item__header {
+  padding-left: 20px;
+}
+
+.ql-toolbar.ql-snow {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.ql-container.ql-snow {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}

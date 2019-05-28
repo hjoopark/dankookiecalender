@@ -1,0 +1,388 @@
+/*******************************
+            Standard
+*******************************/
+
+/*--------------
+    Comments
+---------------*/
+
+.comments {
+    margin: 1em 0em 1em 0em;
+    /* margin: 1.5em 0em; */
+    /* max-width: 650px; */
+}
+
+/* .comments:first-child {
+      margin-top: 0em;
+    } */
+
+/* .comments:last-child {
+      margin-bottom: 0em;
+    } */
+
+/*--------------
+         Comment
+    ---------------*/
+
+.comments .comment {
+    position: relative; // background: none;
+    margin: 0em; // padding: 0.5em 2em 0.5em;
+    padding: 0.5em 1em 0.5em 1em;
+    border: none;
+    border-top: none;
+    line-height: 1.2;
+    text-align: left;
+    &.highlight {
+        background-color: aliceblue;
+    }
+}
+
+.comments .comment:first-child {
+    /* margin-top: 1em; */
+    /* padding: 15px; */
+    /* padding-top: 0em; */
+}
+
+/*--------------------
+        Nested Comments
+    ---------------------*/
+
+.comments .comment .comments {
+    margin: 0em 0em 0.5em 0.5em;
+    padding: 1em 0em 1em 1em;
+}
+
+.comments .comment .comments:before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.comments .comment .comments .comment {
+    border: none;
+    border-top: none;
+    &.highlight {
+        background-color: aliceblue;
+    }
+}
+
+/*--------------
+         Avatar
+    ---------------*/
+
+.comments .comment .avatar {
+    display: block;
+    width: 2.5em;
+    height: auto;
+    float: left;
+    margin: 0.2em 0em 0em;
+}
+
+.comments .comment img.avatar,
+.comments .comment .avatar img {
+    display: block;
+    margin: 0em auto;
+    width: 100%;
+    border-radius: 0.25rem;
+}
+
+/*--------------
+         Content
+    ---------------*/
+
+.comments .comment>.content {
+    display: block;
+}
+
+/* If there is an avatar move content over */
+
+.comments .comment>.avatar~.content {
+    margin-left: 3.5em;
+}
+
+/*--------------
+         Author
+    ---------------*/
+
+.comments .comment .author {
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: bold;
+}
+
+.comments .comment a.author {
+    cursor: pointer;
+    &:hover {
+        color: #1e70bf;
+    }
+    &.official {
+        color: white;
+        background-color: #5b9bff;
+        padding: 0px 3px;
+        border-radius: 5px;
+    }
+}
+
+/*--------------
+         Metadata
+    ---------------*/
+
+.comments .comment .metadata {
+    display: inline-block;
+    margin-left: 0.5em;
+    margin-top: -0.5em;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 0.875em;
+}
+
+.comments .comment .metadata>* {
+    display: inline-block;
+    margin: 0em 0.5em 0em 0em;
+}
+
+.comments .comment .metadata> :last-child {
+    margin-right: 0em;
+}
+
+.comments .comment .metadata>.vote:hover,
+.commnets .comment .metadata>.blame:hover {
+    cursor: pointer;
+    color: #1e70bf;
+    transform: scale(1.2);
+}
+
+.comments .comment .metadata>.rate {
+    color: #FFBD4D;
+}
+
+.comments .comment .metadata>.label.author {
+    font-size: 0.8em;
+    padding: 2px;
+    color: #FFBD4D;
+    border: 1px solid #FFBD4D;
+    border-radius: 3px;
+}
+
+.comments .comment .metadata>.label.best {
+    font-size: 0.8em;
+    padding: 2px;
+    color: red;
+    border: 1px solid red;
+    border-radius: 3px;
+}
+
+/*--------------------
+         Comment Text
+    ---------------------*/
+
+.comments .comment .text {
+    margin: 0.25em 0em 0.5em;
+    font-size: 1em;
+    word-wrap: break-word;
+    // white-space: pre-line;
+    color: rgba(0, 0, 0, 0.87);
+    line-height: 1.3;
+    font-family: inherit;
+    pre {
+        margin: 0;
+        overflow: hidden;
+        display: block;
+        white-space: pre-line;
+        font-family: inherit;
+    }
+}
+
+.comments .comment pre.text {
+    overflow: hidden;
+    display: block;
+    white-space: pre-line; // margin: 0;
+    &.deleted {
+        color: rgb(189, 189, 189);
+    }
+    &.blocked {
+        color: red;
+    }
+}
+
+.comments .comment pre.text .best {
+    background-color: red;
+    color: white;
+    font-size: 0.8em;
+}
+
+.comments .comment pre.text .tag {
+    background-color: aliceblue;
+    color: #e2c101;
+    font-size: 0.8em;
+    &:hover {
+        color: #597dff
+    }
+}
+
+.comments .comment .text>.category {
+    font-weight: bold;
+}
+
+.comments .comment textarea.edit {
+    width: 100%;
+    outline: none;
+    resize: none;
+    border: 1px solid #dee3eb;
+    border-radius: 0;
+    background-color: beige;
+    appearance: none;
+    margin-top: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/*--------------------
+         User Actions
+    ---------------------*/
+
+.comments .comment .actions {
+    font-size: 0.875em;
+}
+
+.comments .comment .actions span {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0em 0.75em 0em 0em;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.comments .comment .actions span:last-child {
+    margin-right: 0em;
+}
+
+.comments .comment .actions span.active,
+.comments .comment .actions span:hover {
+    color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.comments .comment .actions span.reply i {
+    transform: rotate(180deg);
+}
+
+.comments .comment .actions span.reply {
+    color: rgba(255, 187, 0, 0.7);
+}
+
+.comments .comment .actions span.reply:hover {
+    color: rgba(255, 187, 0, 0.9);
+}
+
+.comments .comment .actions span.report {
+    color: rgba(255, 0, 0, 0.5);
+}
+
+.comments .comment .actions span.report:hover {
+    color: rgba(255, 0, 0, 0.8);
+}
+
+.comments .comment .actions span.edit.post {
+    font-weight: bold;
+    color: rgba(255, 187, 0, 0.7);
+    &:hover {
+        color: rgba(255, 187, 0, 0.9);
+    }
+}
+
+/*--------------------
+          Reply Form
+    ---------------------*/
+
+.comments>.reply.form {
+    margin-top: 1em;
+}
+
+.comments .comment .reply.form {
+    width: 100%;
+    margin-top: 1em;
+}
+
+.comments .reply.form textarea {
+    font-size: 1em;
+    height: 12em;
+}
+
+/*******************************
+                State
+    *******************************/
+
+.collapsed.comments,
+.comments .collapsed.comments,
+.comments .collapsed.comment {
+    display: none;
+}
+
+/*******************************
+               Variations
+    *******************************/
+
+/*--------------------
+            Threaded
+    ---------------------*/
+
+.threaded.comments .comment .comments {
+    margin: -1.5em 0 -1em 1.25em;
+    padding: 3em 0em 2em 2.25em;
+    box-shadow: -1px 0px 0px rgba(34, 36, 38, 0.15);
+}
+
+/*--------------------
+            Minimal
+    ---------------------*/
+
+.minimal.comments .comment .actions {
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: auto;
+    -webkit-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+.minimal.comments .comment>.content:hover>.actions {
+    opacity: 1;
+}
+
+/*-------------------
+            Sizes
+    --------------------*/
+
+.mini.comments {
+    font-size: 0.78571429rem;
+}
+
+.tiny.comments {
+    font-size: 0.85714286rem;
+}
+
+.small.comments {
+    font-size: 0.92857143rem;
+}
+
+.comments {
+    font-size: 1rem;
+}
+
+.large.comments {
+    font-size: 1.14285714rem;
+}
+
+.big.comments {
+    font-size: 1.28571429rem;
+}
+
+.huge.comments {
+    font-size: 1.42857143rem;
+}
+
+.massive.comments {
+    font-size: 1.71428571rem;
+}
