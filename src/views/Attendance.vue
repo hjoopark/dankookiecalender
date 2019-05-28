@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- <div id="calendar"></div> -->
-        <FullCalendar defaultView="dayGridMonth"   @dateClick="handleDateClick" :plugins="calendarPlugins" :events="events" />
+        <FullCalendar defaultView="dayGridMonth" @eventRender="showCheckedDate"  @dateClick="handleDateClick" :plugins="calendarPlugins" :events="events" />
         <!-- <button id="check" @click="attendanceChecked()">
             출첵하기
         </button> -->
@@ -15,6 +15,7 @@ import interactionPlugin from '@fullcalendar/interaction'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import '@fullcalendar/core/main.css'
 import '@fullcalendar/daygrid/main.css'
+import checkImage from '../assets/images/attendance-check.svg'
 
 export default {
   components: {
@@ -25,13 +26,11 @@ export default {
         events: [
                 {
                     start : "2019-05-21",
-                    imageurl : "C:/Users/hjoo_/Documents/dankookie-mobile-web/src/images/professor101/attendance-check.png",
                     rendering: 'background',
                     color: '#ff9f89'
                 }
                 , {
                     start : "2019-05-23",
-                    imageurl : "C:/Users/hjoo_/Documents/dankookie-mobile-web/src/images/professor101/attendance-check.png",
                     rendering: 'background',
                     color: '#ff9f89'
                 }
@@ -89,7 +88,6 @@ export default {
                 alert("출석되었습니다♥")
                 var newDate = {
                     start: clickDate,
-                    imageurl : "C:/Users/hjoo_/Documents/dankookie-mobile-web/src/images/professor101/attendance-check.png",
                     rendering: 'background',
                     color: '#ff9f89'
                 }
@@ -118,11 +116,20 @@ export default {
             //             cell.css("background-color", "red");
             //         }
 
-            this.events.forEach(image => {
-                if(image.imageurl) {
-                    event.el.html("<center><img src='" + image.imageurl + "'><center>")
-                }
-            })
+            // this.events.forEach(image => {
+            //     if(this.events.imageurl) {
+            //         var img = document.createElement("img")
+            //         img.setAttribute('src', image.imageurl)
+            //         event.el.appendChild(img)
+            //     }
+            // })
+
+            var img = document.createElement("img")
+            img.setAttribute('src', checkImage)
+            img.classList.add("center")
+            event.el.appendChild(img)
+            
+                
             // var valuableimage = this.events.some(image => image.imageurl)
             //     if(valuableimage) {
             //         event.el.prepend("<center><img src='" + image.imageurl + "'><center>")
@@ -137,5 +144,12 @@ export default {
 </script>
 
 <style>
-
+    .center {
+        margin: auto;
+        display: block;
+        height: 35px;
+    }
+    .fc-bgevent {
+        vertical-align: middle !important;
+    }
 </style>
